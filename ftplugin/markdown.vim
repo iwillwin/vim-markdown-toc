@@ -111,7 +111,7 @@ function! s:GetHeadingLinkGFM(headingName)
 
     let l:headingLink = substitute(l:headingLink, "\\%^_\\+\\|_\\+\\%$", "", "g")
     let l:headingLink = substitute(l:headingLink, "\\%#=0[^[:alnum:]\u4e00-\u9fbf _-]", "", "g")
-    let l:headingLink = substitute(l:headingLink, " ", g:vmt_gfm_link_connector, "g")
+    let l:headingLink = substitute(l:headingLink, " ", "-", "g")
 
     if l:headingLink ==# ""
         let l:nullKey = "<null>"
